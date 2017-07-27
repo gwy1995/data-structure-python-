@@ -65,6 +65,46 @@ class LinkList():
         k.next=k.next.next
         return v
 
+    def list_empty(self):
+        if self.head:
+            return False
+        else:
+            return True
+
+    def clear_list(self):
+        self.head=None
+
+    def list_length(self):
+        k=self.head
+        l=0
+        while k:
+            l+=1
+            k=k.next
+        return l
+
+    def get_elem(self,n):
+        if n>=self.list_length():
+            return 'out of range'
+        if n==0:
+            return self.head.val
+        else:
+            k=self.head
+            j=0
+            while j<n:
+                k=k.next
+                j=j+1
+            return k.val
+
+    def locate_elem(self,n):
+        k=self.head
+        i=0
+        while k:
+            if k.val==n:
+                return i
+            i+=1
+            k=k.next
+        return -1
+
 
 
 y=LinkList()
@@ -76,8 +116,12 @@ y.insert_link_list(0, 0)
 y.show_nodes()
 y.delete_link_list(2)
 y.show_nodes()
-
-
+print y.list_empty()
+print y.get_elem(4)
+print y.list_length()
+print y.locate_elem(10)
+y.clear_list()
+y.show_nodes()
 
 # insert_link_list(link, 1, 5)
 # show_nodes(link)
