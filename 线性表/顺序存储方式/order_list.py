@@ -1,4 +1,4 @@
-class OrderedList():
+class OrderList():
     def __init__(self):
         self.length=0
         self.array=list()
