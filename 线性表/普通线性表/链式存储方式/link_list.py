@@ -122,28 +122,3 @@ print y.list_length()
 print y.locate_elem(10)
 y.clear_list()
 y.show_nodes()
-
-# insert_link_list(link, 1, 5)
-# show_nodes(link)
-
-# # delete
-# def delete_link_list(l,n):
-#     if n==0:
-#         v=l.val
-#         l=l.next
-#         return v
-#     k=l
-#     for i in range(n-1):
-#         k=k.next
-#     v=k.next.val
-#     k.next=k.next.next
-#     return v
-# delete_link_list(link, 0)
-# show_nodes(link)
-
-
-# def change(l):
-#     p=LinkNode(0)
-#     l=p
-# change(link)
-# show_nodes(link)
